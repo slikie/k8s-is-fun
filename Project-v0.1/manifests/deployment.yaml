@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: project
-          image: rility/k8s-web-proj:0.1
+          image: rility/k8s-web-proj:0.2

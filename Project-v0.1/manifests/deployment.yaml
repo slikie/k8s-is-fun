@@ -12,6 +12,13 @@ spec:
       labels:
         app: project
     spec:
+      volumes:
+        - name: shared-image
+          persistentVolumeClaim:
+            claimName: image-claim
       containers:
         - name: project
-          image: rility/k8s-web-proj:0.4
+          image: rility/k8s-web-proj:0.5
+          volumeMounts:
+          - name: shared-image
+            mountPath: /app/images
